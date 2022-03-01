@@ -1,0 +1,320 @@
+/* home__bievenida */
+.main {
+    margin-top: 4.4em;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 10px;
+    height: auto;
+}
+
+.home__bienvenida {
+    width: 100%;
+    background:  #E6204E;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.home__title {
+    font-size: 1.3em;
+    padding-bottom: .5em;
+}
+
+.home__texto {
+    font-size: .8em;
+}
+
+.home__subtitle {
+    text-align: center;
+    padding: 1em 0 1em 0;
+}
+
+.home__container, .categorias__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home__ofertas, .categorias__productos {
+    display: inline-block;
+    width: 47%;
+    margin-bottom: .9rem;
+    text-align: center;
+	border: 1px solid grey;
+	border-radius: .5em;
+}
+
+.home__ofertas--link, .home__ofertas--link {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.home__ofertas--img {
+    width: 100%;
+	border-radius: .5em .5em 0 0;
+}
+
+.home__ofertas--precio {
+    color: #FFF;
+	background: #e6204e;
+    padding: .4em 0 .4em 0;
+	font-size: 1.5rem;
+	border-radius: 0 0 .3em .3em;
+		
+}
+
+.home__ofertas--descripcion {
+    color: #1a1a1a;
+    font-size: 1rem;
+	line-height: 1em;
+	padding-bottom: .7em;
+	padding-top: .7em
+}
+
+.categorias {
+	width: 100%;
+	border-radius: .5em .5em 0 0; 
+}
+
+.categorias__title {
+	text-align: center;
+    padding: 1em 0 1em 0;
+}
+
+
+@mixin sizes($width, $height, $border) {
+	height: $height;
+	width: $width;
+	border-radius: $border;
+}
+
+.categorias__img {
+	@include sizes(100%, 100%, .5em); 
+}
+
+
+/*    TALLES GRANDES */
+.tallesGrandes {
+	
+}
+
+.tallesGrandes__title, .deportivo__title, .nosotros__title {
+	text-align: center;
+    padding: 20px 0 20px 0;
+    background: #E6204E;
+    color: #FFF;
+}
+
+.tallesGrandes__container, .deportivo__container {
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tallesGrandes__productos, .deportivo__productos {
+	margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+	width: 100%;
+}
+
+.tallesGrandes__img, .deportivo__img {
+	width: 100%;
+}
+
+.tallesGrandes__descripcion, .deportivo__descripcion {
+	padding: 5px 0 5px 0;
+	color: grey;
+	padding: .5em 0 .5em 0;
+}
+
+.tallesGrandes__precio, .deportivo__precio {
+	color: #000;
+	font-weight: 800;
+}
+
+.tallesGrandes__cuotas, .deportivo__cuotas {
+	color: green;
+	padding: .5em 0 .5em 0;
+	
+}
+
+.tallesGrandes__comprar, .deportivo__comprar {
+	background: #1A1A1A;
+	padding: .5em 1em .5em 1em;
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: .3em;
+}
+
+.tallesGrandes__comprar:hover, .deportivo__comprar:hover {
+	background: #E6204E;
+	transition: 1s;
+}
+
+/* DEPORTIVO */
+.deportivo {
+	
+}
+
+.deportivo__title {
+	background: #E6204E;
+}
+
+.deportivo__subtitle {
+	text-align: center;
+}
+
+/*	NOSOTROS  */
+.nosotros {
+	
+}
+
+.nosotros__container {
+	
+}
+
+.nosotros__subtitle {
+	text-align: center;
+	padding: .5em 0 .5em 0;
+}
+
+.nosotros__quienesSomos {
+}
+
+.nosotros__quienesSomos--title, .nosotros__articulos--title {
+	background: #E6204E;
+	color: #FFF;
+	text-align: center;
+	padding: .5em 0 .5em 0;
+}
+
+.nosotros__quienesSomos--texto, .nosotros__articulos--texto {
+	padding: .7em;
+	line-height: 1.5em;
+}
+
+.nosotros__articles {
+	
+}
+
+ /* CONTACTO */
+.contacto__title {
+	text-align: center;
+	background: #E6204E;
+	color: #FFF;
+	padding: .5em;
+}
+.contacto__datos {
+	padding: .5em;
+}
+
+.contacto__contacto {
+	
+}
+
+.contacto__contacto--title {
+	text-align: center;
+	padding: .5em 0 0 0;
+}
+
+.contacto__contacto--texto {
+	text-align: center;
+}
+
+.form__span {
+	color: #E6204E;
+}
+
+.contacto__contacto--telefono{
+	padding: 1em 0 1em 0;
+}
+
+.contacto__contacto--email {
+	padding: 0 0 1em 0;
+	text-decoration: none;
+	display: inline-block;
+	
+}
+
+.contacto__contacto--direccion {
+	padding: 0 0 1.5em 0;
+}
+
+.contacto__horario {
+	
+}
+
+.contacto__horario--title {
+	padding: 0 0 .5em 0;
+}
+
+.contacto__horario--subtitle {
+	padding: .0 0 .5em 0;
+}
+
+.contacto__horario--horario, .contacto__horario--finde, .contacto__horario--sabado, .contacto__horario--domingo {
+	padding: 0 0 .5em 0;
+}
+
+.contacto__map {
+	
+}
+
+.contacto__mapa--iframe {
+	border: none;
+	width: 100%;
+}
+
+.form__container {
+	background: url(../imgs/bck-form.jpg) no-repeat 0 0;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.form__formulario {
+	width: 100%;
+	padding: .5em;
+}
+
+.form__label {
+	display: inline-block;
+	width: 100%;
+	visibility: hidden;
+}
+
+.form__input, .form__textarea {
+	width: 100%;
+	padding: 1em; 
+	border-radius: .5em;
+	border: none;
+}
+
+.form__textarea {
+		height: 10em;
+}
+
+.form__submit {
+	background: #E6204E;
+	padding: .5em 1em .5em 1em;
+	border: none;
+	width: 100%;
+	color: #FFF;
+	margin-top: .5em;
+	border-radius: .3em;
+}
+
+
+.form__reset {
+    @extend .form__submit;
+    background: #E6204E;
+	padding: .5em 1em .5em 1em;
+	border: none;
+	width: 100%;
+	color: #FFF;
+	margin-top: .5em;
+	border-radius: .3em;
+}

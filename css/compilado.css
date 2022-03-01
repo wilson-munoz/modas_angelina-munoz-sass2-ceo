@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex; }
+  .header__hamburguesa {
+    background: #1A1A1A;
+    color: #FFF;
+    padding: 1em;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0; }
+  .header__logo {
+    text-align: center;
+    color: #FFF;
+    border: 2px solid #E6204E;
+    display: inline-block;
+    float: left;
+    padding: 7px;
+    font-weight: 800;
+    text-decoration: none; }
+  .header__nav {
+    position: fixed;
+    background: #1A1A1A;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 100%;
+    transition: 0.7s;
+    z-index: 2;
+    display: inline-block; }
+  .header__list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 20px auto 0 auto; }
+  .header__link {
+    display: block;
+    padding: .75em 1em;
+    color: #FFF;
+    text-decoration: none; }
+  .header__link:hover {
+    color: #E6204E; }
+  .header__link span {
+    display: none; }
+  .header__form {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px; }
+  .header__form-input {
+    width: 70%;
+    padding: 7px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #E6204E;
+    color: #FFF;
+    font-size: 16px; }
+  .header__form-button {
+    padding: .5em;
+    border: none;
+    background: none;
+    color: #E6204E;
+    font-size: 20px;
+    cursor: pointer; }
+  .header__carrito i {
+    color: #FFF;
+    font-size: 20px;
+    z-index: 600000; }
+
+#menu-toggle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../imgs/abrir-menu.png") no-repeat;
+  background-size: contain;
+  margin-top: 2px;
+  z-index: 10000; }
+
+.menu_abierto .header__nav {
+  left: 0; }
+
+.menu_abierto #menu-toggle {
+  background: url("../imgs/cerrar-menu.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin-top: 2px; }
+
+/* home__bievenida */
+.main {
+  margin-top: 4.4em;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 10px;
+  height: auto; }
+
+.home__bienvenida {
+  width: 100%;
+  background: #E6204E;
+  color: #FFF;
+  text-align: center;
+  padding: 20px 0 20px 0; }
+
+.home__title {
+  font-size: 1.3em;
+  padding-bottom: .5em; }
+
+.home__texto {
+  font-size: .8em; }
+
+.home__subtitle {
+  text-align: center;
+  padding: 1em 0 1em 0; }
+
+.home__container, .categorias__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.home__ofertas, .categorias__productos {
+  display: inline-block;
+  width: 47%;
+  margin-bottom: .9rem;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: .5em; }
+
+.home__ofertas--link, .home__ofertas--link {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none; }
+
+.home__ofertas--img {
+  width: 100%;
+  border-radius: .5em .5em 0 0; }
+
+.home__ofertas--precio {
+  color: #FFF;
+  background: #e6204e;
+  padding: .4em 0 .4em 0;
+  font-size: 1.5rem;
+  border-radius: 0 0 .3em .3em; }
+
+.home__ofertas--descripcion {
+  color: #1a1a1a;
+  font-size: 1rem;
+  line-height: 1em;
+  padding-bottom: .7em;
+  padding-top: .7em; }
+
+.categorias {
+  width: 100%;
+  border-radius: .5em .5em 0 0; }
+
+.categorias__title {
+  text-align: center;
+  padding: 1em 0 1em 0; }
+
+.categorias__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em; }
+
+/*    TALLES GRANDES */
+.tallesGrandes__title, .deportivo__title, .nosotros__title {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  background: #E6204E;
+  color: #FFF; }
+
+.tallesGrandes__container, .deportivo__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.tallesGrandes__productos, .deportivo__productos {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100%; }
+
+.tallesGrandes__img, .deportivo__img {
+  width: 100%; }
+
+.tallesGrandes__descripcion, .deportivo__descripcion {
+  padding: 5px 0 5px 0;
+  color: grey;
+  padding: .5em 0 .5em 0; }
+
+.tallesGrandes__precio, .deportivo__precio {
+  color: #000;
+  font-weight: 800; }
+
+.tallesGrandes__cuotas, .deportivo__cuotas {
+  color: green;
+  padding: .5em 0 .5em 0; }
+
+.tallesGrandes__comprar, .deportivo__comprar {
+  background: #1A1A1A;
+  padding: .5em 1em .5em 1em;
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: .3em; }
+
+.tallesGrandes__comprar:hover, .deportivo__comprar:hover {
+  background: #E6204E;
+  transition: 1s; }
+
+/* DEPORTIVO */
+.deportivo__title {
+  background: #E6204E; }
+
+.deportivo__subtitle {
+  text-align: center; }
+
+/*	NOSOTROS  */
+.nosotros__subtitle {
+  text-align: center;
+  padding: .5em 0 .5em 0; }
+
+.nosotros__quienesSomos--title, .nosotros__articulos--title {
+  background: #E6204E;
+  color: #FFF;
+  text-align: center;
+  padding: .5em 0 .5em 0; }
+
+.nosotros__quienesSomos--texto, .nosotros__articulos--texto {
+  padding: .7em;
+  line-height: 1.5em; }
+
+/* CONTACTO */
+.contacto__title {
+  text-align: center;
+  background: #E6204E;
+  color: #FFF;
+  padding: .5em; }
+
+.contacto__datos {
+  padding: .5em; }
+
+.contacto__contacto--title {
+  text-align: center;
+  padding: .5em 0 0 0; }
+
+.contacto__contacto--texto {
+  text-align: center; }
+
+.form__span {
+  color: #E6204E; }
+
+.contacto__contacto--telefono {
+  padding: 1em 0 1em 0; }
+
+.contacto__contacto--email {
+  padding: 0 0 1em 0;
+  text-decoration: none;
+  display: inline-block; }
+
+.contacto__contacto--direccion {
+  padding: 0 0 1.5em 0; }
+
+.contacto__horario--title {
+  padding: 0 0 .5em 0; }
+
+.contacto__horario--subtitle {
+  padding: .0 0 .5em 0; }
+
+.contacto__horario--horario, .contacto__horario--finde, .contacto__horario--sabado, .contacto__horario--domingo {
+  padding: 0 0 .5em 0; }
+
+.contacto__mapa--iframe {
+  border: none;
+  width: 100%; }
+
+.form__container {
+  background: url(../imgs/bck-form.jpg) no-repeat 0 0;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.form__formulario {
+  width: 100%;
+  padding: .5em; }
+
+.form__label {
+  display: inline-block;
+  width: 100%;
+  visibility: hidden; }
+
+.form__input, .form__textarea {
+  width: 100%;
+  padding: 1em;
+  border-radius: .5em;
+  border: none; }
+
+.form__textarea {
+  height: 10em; }
+
+.form__submit, .form__reset {
+  background: #E6204E;
+  padding: .5em 1em .5em 1em;
+  border: none;
+  width: 100%;
+  color: #FFF;
+  margin-top: .5em;
+  border-radius: .3em; }
+
+.form__reset {
+  background: #E6204E;
+  padding: .5em 1em .5em 1em;
+  border: none;
+  width: 100%;
+  color: #FFF;
+  margin-top: .5em;
+  border-radius: .3em; }
+
+/*  FOOTER */
+.footer {
+  width: 100%;
+  background: #1A1A1A;
+  color: white; }
+
+.footer__container {
+  width: 100%;
+  margin: auto; }
+
+.footer__nosotros, .footer__compras, .footer__atencion, .footer__redes {
+  width: 80%;
+  margin: 0 auto 1em auto; }
+
+.footer__nosotros--title, .footer__compras--title, .footer__atencion--title, .footer__redes--title {
+  padding: 10px 0 10px 10px; }
+
+.footer__list--compras {
+  list-style: none; }
+
+.footer__item--compras {
+  line-height: 1.5em; }
+
+.footer__link--compras {
+  text-decoration: none;
+  color: #FFF; }
+
+.footer__item--nosotros {
+  list-style: none;
+  line-height: 25px; }
+
+.footer__list--nosotros {
+  padding-left: 10px; }
+
+.footer__link--nosotros {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 13px; }
+
+.footer__link--nosotros:hover {
+  color: #E6204E; }
+
+.footer__atencion--email {
+  text-decoration: none;
+  color: #FFF; }
+
+.footer__atencion--telefono {
+  padding: 1em 0 1em 0; }
+
+.footer__redes {
+  text-align: center;
+  padding-left: 10px; }
+
+.footer__redes--item {
+  display: inline-block;
+  padding-left: 10px; }
+
+.footer__redes--link i {
+  font-size: 25px;
+  margin-right: 20px; }
+
+.footer__borde {
+  border-bottom: 1px solid #FFF;
+  width: 100%;
+  padding: 5px 0 5px 0;
+  display: inline-block; }
+
+.footer__pie {
+  text-align: center;
+  width: 100%; }
+
+.footer__pie--texto {
+  padding: 1em 0 1em 0;
+  font-size: .8em; }
+
+.redes--instagram {
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf); }
+
+.redes--facebook {
+  background: #3b5998; }
+
+.redes--color {
+  color: #FFF; }
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 480px) {
+  .container-grid {
+    display: grid;
+    grid-template-areas: 'header header ' 'main main ' 'main main ' 'footer footer ';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; }
+  header {
+    grid-area: header; }
+  main {
+    grid-area: main; }
+  footer {
+    grid-area: footer; }
+  .home__title {
+    font-size: 22px; }
+  /*    TALLES GRANDES */
+  .tallesGrandes__productos, deportivo__productos {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 48%; }
+  .tallesGrandes__img, .deportivo__img {
+    width: 100%; }
+  /*    FOOTER */
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 6000000; }
+  .footer__nosotros, .footer__compras, .footer__atencion, .footer__redes {
+    width: 45%; } }
+
+@media only screen and (min-width: 640px) {
+  .home__title {
+    font-size: 32px; }
+  .home__texto {
+    font-size: 16px; }
+  /* CONTACTO */ }
+
+@media only screen and (min-width: 768px) {
+  .header__nav {
+    width: 45%; }
+  .header__link span {
+    display: none; }
+  .home__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; }
+  .home__ofertas {
+    display: inline-block;
+    width: 47%;
+    margin: 10px;
+    text-align: center; }
+  /*    TALLES GRANDES */
+  .tallesGrandes__productos, .deportivo__productos {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 30%; }
+  .tallesGrandes__img, .deportivo__img {
+    width: 100%; }
+  /*	NOSOTROS */
+  .nosotros__articles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .nosotros__articulos {
+    width: 48%; }
+  .nosotros__articulos--title {
+    width: 10em;
+    margin: auto; }
+  /* CONTACTO */
+  .contacto__container {
+    display: flex;
+    justify-content: space-between; }
+  .contacto__datos, .contacto__mapa {
+    width: 49%; }
+  .contacto__mapa--iframe {
+    height: 100%; }
+  .form__nombre, .form__telefono, .form__email {
+    width: 33%;
+    display: inline-block; }
+  .form__submit, .form__reset {
+    width: 15%;
+    cursor: pointer;
+    font-size: 1rem; }
+  .footer__nosotros, .footer__compras, .footer__atencion, .footer__redes {
+    width: 22%; } }
+
+@media only screen and (min-width: 991px) {
+  #menu-toggle {
+    display: none; }
+  .container-grid {
+    display: grid;
+    grid-template-areas: 'header header header header' 'main main main main' 'main main main main' 'footer footer footer footer ';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; }
+  /*    TALLES GRANDES */
+  .tallesGrandes__productos, .deportivo__productos {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 30%; }
+  .tallesGrandes__img, .deportivo__img {
+    width: 100%; }
+  .tallesGrandes__img:hover, .deportivo__img:hover {
+    transform: scale(1.1);
+    transition: transform .5s; }
+  .header {
+    display: flex;
+    align-items: center; }
+  .header__nav {
+    position: static;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    z-index: 60000; }
+  .header__form {
+    width: 30%;
+    margin-top: 0; }
+  .header__list {
+    width: 65%; }
+  .header__item {
+    display: inline-block;
+    padding: -0px;
+    float: right; }
+  .header__link {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    margin-left: 10px;
+    border-bottom: none; }
+  .header__link span {
+    display: none; }
+  .header__carrito {
+    padding-right: 15px; }
+  .home__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .home__ofertas, .categorias__productos {
+    display: inline-block;
+    width: 30%; }
+  .home__ofertas:hover, .categorias__productos:hover {
+    /*		border: 1px solid red;*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.1) inset; }
+  .form__nombre, .form__telefono, .form__email {
+    width: 33%;
+    display: inline-block; } }
+
+@media only screen and (min-width: 1200px) {
+  .container-grid {
+    display: grid;
+    grid-template-areas: 'header main main main' 'header main main main' 'header main main main' 'footer footer footer footer ';
+    grid-template-columns: 20% 1fr 1fr 1fr;
+    grid-template-rows: 1/5; }
+  header {
+    grid-area: header; }
+  main {
+    grid-area: main; }
+  footer {
+    grid-area: footer; }
+  .header__hamburguesa {
+    position: fixed;
+    display: inline-block;
+    width: 20%;
+    bottom: 0;
+    top: 0; }
+  .header__logo {
+    flex: 1; }
+  .header__nav {
+    width: 100%;
+    display: inline-block; }
+  .header__form {
+    display: inline-block;
+    width: 100%;
+    margin-top: 70px; }
+  .header__list {
+    width: 100%;
+    display: inline-block; }
+  .header__item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px; }
+  .header__link {
+    display: inline-block;
+    width: 100%; }
+  .header__link:hover {
+    color: #E6204E; }
+  .header__link span {
+    display: inline-block; }
+  .header__link:hover span {
+    color: #E6204E;
+    margin-left: 10px;
+    transition: all 500ms ease; }
+  .header__carrito {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; }
+  h1, h2 {
+    text-transform: uppercase; }
+  /*    HOME */
+  .main {
+    display: inline-block;
+    float: right;
+    clear: right;
+    margin-top: 0; }
+  .home__bienvenida {
+    width: 100%;
+    background: #E6204E;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 0 20px 0; }
+  .home__container, categorias__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; }
+  .home__ofertas, .categorias__productos {
+    display: inline-block;
+    width: 22.5%;
+    text-align: center; }
+  /*    TALLES GRANDES */
+  .tallesGrandes__productos, .deportivo__productos {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 22.5%; }
+  .tallesGrandes__img, .deportivo__img {
+    width: 100%; }
+  /* CONTACTO */
+  .form__nombre, .form__telefono, .form__email {
+    width: 33%;
+    display: inline-block; }
+  /*    FOOTER */
+  .footer {
+    z-index: 60000; }
+  .form__formulario {
+    width: 80%;
+    margin: auto; } }
+
+@media only screen and (max-width: 1200px) {
+  main {
+    /*        width: 85%;*/ } }
